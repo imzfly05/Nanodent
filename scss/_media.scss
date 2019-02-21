@@ -1,0 +1,95 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	.mobile-menu-button{
+		display: block;
+	}
+	header{
+		.logo img{
+			display: none;
+		}
+
+	}
+	.contact{
+		display: none;
+	}
+	
+	.main-nav{
+		display: none;
+	}
+	
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	.first-section h1{
+		font-size: 55px;
+	}
+	.inner-header h1{
+		font-size: 40px;
+	}
+
+	.second-section .items-cool .item::before{
+		display: none;
+	}
+	.block-name-mobile{
+		display: inline-block;
+		margin-bottom: 20px;
+		margin-left: -5px;		
+	}
+	.third-section .block-name{
+		display: none;
+	}
+	footer .top-footer{
+		text-align: center;
+	}
+	footer .bottom-footer{
+		text-align: center;
+		.social-icons{
+			text-align: center;
+		}
+	}
+	#back-top{
+		display: inline-block;
+	}
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	.carousel-control-prev-icon, .carousel-control-next-icon{		
+		display: none;
+	}
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
