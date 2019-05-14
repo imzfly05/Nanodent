@@ -57,13 +57,12 @@ b, strong {
 	width: 100%;
 	height: 100px;
 	.logo-wrap{
-		.logo-mobile{
-			color: $accent;
-			font-size: 30px;
-			line-height: 65px;
-			margin: 0;
-			padding: 0;
+		.logo-mobile{			
+			line-height: 65px;			
 			z-index: 0;
+			img{
+				height: 50px;
+			}
 			
 		}
 	}
@@ -73,6 +72,9 @@ b, strong {
 		display: block;
 		line-height: 100px;
 		z-index: 6;
+		img{			
+			height: 80px;			
+		}
 	}
 
 }
@@ -164,7 +166,9 @@ b, strong {
   width: 100vw;  
   pointer-events:none;
 }
-
+.hidden{
+	display: none;
+}
 .menu-mobile {
   display:flex;
   justify-content: center;
@@ -310,42 +314,95 @@ section{
 	position: relative;
 	
 }
-.first-section{
+
+.first-section-main{
 	width: 100%;
-	height: 100vh;
-	background-position: center center;
-	background-size: cover;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	
-	.overlay{
-		position: absolute;
-		top: 0;
-		right: 0;
-		background-color: #000;
-		opacity: 0.7;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-	}
-	h1{
-		position: relative;
+
+	.carousel-control-next-icon{
+		background-image: url(../img/assets/next_white.svg);
 		
-		font-size: 100px;		
-		margin: 0;
-		margin-bottom: 15px;
-		padding: 0;
-		color: $accent;
-		z-index: 2;
+	}
+	.carousel-control-prev-icon{
+		background-image: url(../img/assets/prev_white.svg);
+		
+	}
+	
+	.carousel-indicators{
+		bottom: 10%;
+		z-index: 6;		
+		cursor: pointer;
+	}
+	.overlay{
+		z-index: 1;
+	}	
+	.slider_background{
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	
+}
+.first-section-header{		
+	position: relative;
+	z-index: 2;
+	display: inline-block;	
+	span{		
+		display: block;
+		color: #f4f4f4;
+		text-align: center;
+		font-size: 27px;
+		line-height: 1.3;	
+		b{
+			color: $accent;
+		}
+		
 	}
 	.contact_button{
 		display: inline-block;
-		position: relative;
-		z-index: 2;
+		position: relative;		
+		margin-top: 20px;
 	}
 }
+
+// .first-section{
+// 	width: 100%;
+// 	height: 100vh;
+// 	background-position: center center;
+// 	background-size: cover;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	text-align: center;
+	
+	
+// 	.overlay{
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		background-color: #000;
+// 		opacity: 0.7;
+// 		width: 100%;
+// 		height: 100%;
+// 		z-index: 1;
+// 	}
+// 	h1{
+// 		position: relative;
+// 		font-size: 100px;		
+// 		margin: 0;
+// 		margin-bottom: 15px;
+// 		padding: 0;
+// 		color: $accent;
+// 		z-index: 2;
+// 	}
+// 	.contact_button{
+// 		display: inline-block;
+// 		position: relative;
+// 		z-index: 2;
+// 		margin-top: 20px;
+// 	}
+// }
 
 
 .second-section{
@@ -581,13 +638,13 @@ section{
 }
 
 .carousel-control-next-icon{
-	background-image: url(../img/assets/next.svg);
+	background-image: url(../img/assets/next_blue.svg);
 	background-size: contain;
 	height: 50px;
 	width: 40px;
 }
 .carousel-control-prev-icon{
-	background-image: url(../img/assets/prev.svg);
+	background-image: url(../img/assets/prev_blue.svg);
 	background-size: contain;
 	height: 50px;
 	width: 40px;
@@ -665,12 +722,11 @@ position: relative;
 
 .logo{	
 	line-height: 100px;	
-	font-size: 30px;	
-	color: $accent;	
-	&:hover, &:focus{
-		color: $accent;
-		text-decoration: none;
+	
+	img{
+		height: 80px;
 	}
+		
 }
 nav{
 	text-align: right;
@@ -762,7 +818,7 @@ nav{
 	
 }
 .inner-header{
-	min-height: 50vh;
+	
 	background-size: cover;
 	background-position: center center;
 	text-align: center;
@@ -961,6 +1017,27 @@ justify-content: center;
 	padding: 20px 20px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid $accent;
+}
+
+.form_common{
+	padding: 30px;
+	background-color: #fff;
+	max-width: 500px;
+	margin: auto;
+	position: relative;	
+	border-radius: 20px;
+	input, textarea, select, .label-font{
+		font-family: $default-font;
+	}
+	input, textarea, select{
+		border: 1px solid $accent;
+		&::placeholder{
+			opacity: 0.3;
+		}
+	}
+}
+button:focus{
+	outline: none;
 }
 
 //collaps with arrow

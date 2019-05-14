@@ -27,27 +27,51 @@
 </head>
 
 <body>
-
+	<!-- popupforms -->
+	<div class="hidden">
+		<form id="form-callback" class="form_common">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="name">Имя</label>
+					<input type="text" class="form-control" id="name" placeholder="Иванов Иван">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="phone">Телефон</label>
+					<input type="tel" class="form-control" id="phone" placeholder="+7 701 123 45 67">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" class="form-control" id="email" placeholder="пример@email.kz">
+			</div>
+			<div class="form-group">
+				<label for="comment">Вопрос или Коментарий</label>
+				<textarea class="form-control" id="comment" rows="3"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">отправить</button>
+		</form>
+	</div>
+	<!-- popupforms -->
 	<!-- Custom HTML -->
 	<header id="top" class="main_header">
 		<div class="container contact_wrap">
-			<div class="logo-wrap d-block d-md-none">
-				<a class="logo-mobile" href="index.html">NanoDent</a>
+			<div class="logo-wrap d-block d-lg-none">
+				<a class="logo-mobile" href="/"><img src="img/assets/logo-small.png" alt="logo"></a>
 			</div>
-			<a class="logo" href="index.html"><img class="img-responsive" src="img/assets/logo.png" alt="logo"></a>
+			<a class="logo" href="/"><img src="img/assets/logo-big.png" alt="logo"></a>
 
 			<nav class="main-nav clearfix">
 				<ul class="copy">
-					<li><a href="index.html">Главная</a></li>
+					<li class="active"><a href="/">Главная</a></li>
 					<li><a href="about.html">Клиника</a></li>
 					<li><a href="doctors.html">Врачи</a></li>
-					<li class="active"><a href="servis.html">Услуги</a></li>
+					<li><a href="servis.html">Услуги</a></li>
 
 				</ul>
 			</nav>
 			<div class="contact">
 				<div class="contact_number"><a href="tel:+77011234567">+7 701 123 45 67</a></div>
-				<div class="contact_button"><a href="index.html">Обратный звонок</a></div>
+				<div class="contact_button"><a class="popup_recall" href="#form-callback">Обратный звонок</a></div>
 			</div>
 
 			<div class="mobile-menu-button"><span></span></div>
@@ -213,14 +237,14 @@
 				<div class="row justify-content-between">
 					<div class="col-md-3">
 						<div class="logo-wrap">
-							<a class="logo" href="/">NanoDent</a>
+							<a class="logo" href="/"><img src="img/assets/logo-big.png" alt="logo"></a>
 						</div>
 					</div>
 
 					<div class="col-md-8 col-9 d-none d-md-block">
 						<nav class="footer-nav">
 							<ul>
-								<li><a href="index.html">Главная</a></li>
+								<li><a href="/">Главная</a></li>
 								<li><a href="about.html">Наш Офис</a></li>
 								<li><a href="doctors.html">Наши врачи</a></li>
 								<li><a href="servis.html">Услуги</a></li>

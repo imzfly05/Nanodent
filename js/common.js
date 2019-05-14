@@ -34,6 +34,15 @@ $(function () {
 		$(this).siblings('.panel-heading').removeClass('active_arrow');
 	});
 
+	$('.main-nav li').removeClass('active');
+	var path = window.location.pathname;
+	$('.main-nav li a').each(function () {
+		var href = $(this).attr('href');
+		if (path.slice(1).substring(0, href.length) === href) {
+			$(this).parent('li').addClass('active');
+		}
+	});
+
 });
 
 function up() {
@@ -44,3 +53,8 @@ function up() {
 	} else clearTimeout(t);
 	return false;
 } 
+
+
+$(document).ready(function() {
+  $('.popup_recall').magnificPopup();
+});

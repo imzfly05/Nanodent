@@ -34,9 +34,13 @@
 	.first-section h1{
 		font-size: 55px;
 	}
-	.inner-header h1{
-		font-size: 40px;
+	.first-section-main .first-section-header span{
+		font-size: 18px;
 	}
+	.contact_button a{
+		font-size: 16px;
+	}
+	
 
 	.second-section .items-cool .item::before{
 		display: none;
@@ -61,6 +65,12 @@
 	#back-top{
 		display: inline-block;
 	}
+	footer .logo img{
+		height: 60px;
+	}
+	footer .top-footer::after{
+		bottom: -20%;
+	}
 }
 
 // ≥576px
@@ -68,6 +78,28 @@
 	.carousel-control-prev-icon, .carousel-control-next-icon{		
 		display: none;
 	}
+	.form_common{
+		max-width: 320px;
+	}
+	.first-section{
+	height: 50vh;
+	}
+	.inner-header h1{
+		padding-top: 25px;
+	}
+	.first-section h1{
+		display: none;
+	}
+	.first-section-main .slider_background{
+		height: 50vh;
+	}
+	.slider_background{
+		height: 30vh;
+	}
+	.inner-header h1{
+		font-size: 27px;
+	}
+	
 
 }
 
